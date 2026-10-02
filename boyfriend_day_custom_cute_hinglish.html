@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Tiny Surprise For You 💌</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  background:linear-gradient(135deg,#fff5f8 0%,#ffe8f0 50%,#fff8ed 100%);
+  color:#684251;
+}
+.card{
+  width:min(92%,440px); max-height:88vh; overflow:auto;
+  padding:30px 23px; text-align:center; position:relative; z-index:2;
+  background:rgba(255,255,255,.94); border-radius:32px;
+  box-shadow:0 18px 55px rgba(150,75,110,.18);
+  border:1px solid rgba(255,255,255,.8);
+}
+h1{color:#d75d86;font-size:28px;margin:10px 0 17px}
+p{font-size:17px;line-height:1.7;margin:13px 0 20px}
+.sticker{font-size:46px;margin:2px}
+button{
+  border:0;border-radius:999px;padding:13px 22px;margin:6px;
+  background:#e9789d;color:#fff;font-size:16px;
+  box-shadow:0 7px 17px rgba(217,91,132,.18);
+}
+button:active{transform:scale(.95)}
+.note{
+  background:#fff6f8;border-radius:22px;padding:17px 15px;
+  margin:15px 0;text-align:left;border:1px dashed #efadc1;
+}
+.small{font-size:13px;color:#a16b7c}
+.heart{
+  position:fixed;bottom:-50px;font-size:24px;z-index:1;
+  animation:float 5s linear forwards;pointer-events:none
+}
+@keyframes float{
+  0%{transform:translateY(0) rotate(0);opacity:0}
+  15%{opacity:1}
+  100%{transform:translateY(-115vh) rotate(25deg);opacity:0}
+}
+.pop{animation:pop .55s ease}
+@keyframes pop{
+  from{transform:scale(.88);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+</style>
+</head>
+
+<body>
+<div class="card pop" id="card"></div>
+
+<script>
+function show(content){
+  const c=document.getElementById("card");
+  c.className="card pop";
+  c.innerHTML=content;
+}
+
+function start(){
+show(`
+<div class="sticker">💌🌷</div>
+<h1>Oyee... ek minute 👀</h1>
+<p>
+Tumhare liye kuch chhota sa bana hai... 🥺<br>
+Lekin bina kuch questions answer kiye<br>
+surprise unlock nahi hoga. 🤭💗
+</p>
+<button onclick="q1()">Okayy, dikhao 💕</button>
+`);
+}
+
+function q1(){
+show(`
+<div class="sticker">🌍🫶🏻</div>
+<h1>Question No. 1 🥺</h1>
+<p>
+Hum dono ke beech kitni bhi distance ho...<br><br>
+kya tumhe lagta hai ki kuch log<br>
+door hokar bhi dil ke bahut paas reh sakte hain? 🫂
+</p>
+<button onclick="q2()">Haan, bilkul 💗</button>
+<button onclick="q2()">Obviouslyyy 🥹</button>
+`);
+}
+
+function q2(){
+show(`
+<div class="sticker">📱💭✨</div>
+<h1>Question No. 2 👀</h1>
+<p>
+Agar ek din ke liye distance gayab ho jaye...<br><br>
+toh sabse pehle kya karoge? 🥺
+</p>
+<button onclick="q3()">Milne aaunga 🫂</button>
+<button onclick="q3()">Pehle hug 😭💗</button>
+`);
+}
+
+function q3(){
+show(`
+<div class="sticker">🥹🎀</div>
+<h1>Last question...</h1>
+<p>
+Long-distance mein calls, texts, random updates,<br>
+late replies aur “kya kar rahe ho?” jaise<br>
+chhote moments bhi special lagte hain na? 💌
+</p>
+<button onclick="loading()">Haan ji 💗</button>
+`);
+}
+
+function loading(){
+show(`
+<div class="sticker">🧸💗✨</div>
+<h1>Waittt...</h1>
+<p>Thoda sa magic arrange ho raha hai... 🪄</p>
+<p class="small">Collecting hugs • memories • smiles • love-ish vibes 🌷</p>
+`);
+setTimeout(finalPage,2400);
+}
+
+function finalPage(){
+show(`
+<div class="sticker">🎀💗🧸🌷</div>
+<h1>Happy Boyfriend Day 💌</h1>
+
+<div class="note">
+<p style="margin:0">
+Okay, ab asli baat. 🥺<br><br>
+
+Happy Boyfriend Day! 💗<br><br>
+
+Pata hai, humare beech distance hai aur kabhi-kabhi
+ye distance thoda annoying bhi lagta hai. 😭🌍
+Kabhi milne ka mann karta hai, kabhi bas saamne baith kar
+random si baatein karne ka. 🫂<br><br>
+
+But honestly, isi distance ke beech jo chhoti-chhoti
+cheezein hain na — random texts, calls, silly jokes,
+good morning/good night messages, ek dusre ko apne din
+ke random updates dena aur bina reason smile kar dena —
+ye sab mere liye kaafi special hain. 🌷💌<br><br>
+
+Har baar jab screen ke doosri side tum hote ho,
+toh distance thoda kam sa feel hota hai. 🥹💗
+Aur haan, kabhi network problem, busy schedules aur
+“sorry late reply 😭” bhi aate hain... but that's okay.
+Hum perfect nahi hain, bas apne little moments ko
+special banane ki koshish karte hain. 🎀<br><br>
+
+Aaj bas itna kehna tha:
+I hope tumhari life mein bahut saari happiness,
+peace, success aur cute little moments aayein. ✨
+Aur jab bhi distance annoying lage, yaad rakhna —
+some bonds are worth the wait. 🫶🏻<br><br>
+
+Until the next meeting, here's a tiny virtual hug
+from this little webpage. 🫂💗
+</p>
+</div>
+
+<p><b>Take care, smile more, and have a beautiful day. 🌸</b></p>
+<p style="font-size:30px">💗 🧸 🌷 🫶🏻 🎀 ✨ 💌</p>
+<p class="small">Made with a little extra effort & lots of cute vibes. 🥹</p>
+`);
+for(let i=0;i<45;i++){
+  setTimeout(()=>{
+    const h=document.createElement("div");
+    h.className="heart";
+    h.textContent=["💗","💕","💖","🌸","✨","🎀"][Math.floor(Math.random()*6)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(3+Math.random()*3)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6500);
+  },i*80);
+}
+}
+
+start();
+</script>
+</body>
+</html>
